@@ -1,0 +1,25 @@
+{
+  "name": "tribar",
+  "description": "A flexible cross-browser library of CSS of customizable burger icons with animations built with Sass.",
+  "version": "0.0.1",
+  "keywords": ["sass", "scss", "tribar", "tribar sass", "tribar scss", "burger icon", "burger icons", "burger", "burger scss", "burger sass", "burger css", "haleks", "Alex Villeneuve", "AlexVilleneuve", "Alexandre Villeneuve", "AlexandreVilleneuve", "haleksandre"],
+  "license": "MIT",
+  "homepage": "https://haleks.ca",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/haleks/tribar.git"
+  },
+  "author": [
+    {
+      "name": "Alexandre Villeneuve",
+      "email": "haleksviller@gmail.com"
+    }
+  ],
+  "main": "scss/tribar.scss",
+  "style": "dist/css/tribar.css",
+  "sass": "scss/tribar.scss",
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/haleks/tribar/issues"
+  }
+}
