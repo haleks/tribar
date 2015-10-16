@@ -1,0 +1,50 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Mixins
+// ======
+
+// Keyframe
+// --------
+
+@include test-module('keyframe') {
+    @include test('should output prefixed keyframes with requested name') {
+        @include assert('Outputs prefixed keyframes.') {
+            @include input {
+                // @include keyframes('name') {
+                //     from {
+                //         color: red;
+                //     }
+                //
+                //     to {
+                //         color: blue;
+                //     }
+                // };
+            }
+
+            @include expect {
+                // @-webkit-keyframes name {
+                //     from {
+                //         color: red;
+                //     }
+                //
+                //     to {
+                //         color: blue;
+                //     }
+                // }
+                //
+                // @keyframes name {
+                //     from {
+                //         color: red;
+                //     }
+                //
+                //     to {
+                //         color: blue;
+                //     }
+                // }
+            }
+        }
+    }
+}

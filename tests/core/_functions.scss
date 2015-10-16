@@ -1,0 +1,379 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Functions
+// =========
+
+// Map
+// ---
+
+$map: (
+    'first': (
+        'second': 100,
+        'third': 'testing',
+        'fourth': 500px,
+    ),
+    'fifth': 'test'
+);
+
+@include test-module('map-deep-get') {
+    @include test('should return the value of the requested key from a deep nested map') {
+        $actual: map-deep-get($map, 'first', 'second');
+        $expected: 100;
+
+        @include assert-equal($actual, $expected,
+            'Return the value from a deep nested map.'
+        );
+    }
+}
+
+@include test-module('map-deep-set') {
+    @include test('should set the value of the requested key from a deep nested map') {
+        $actual: map-deep-set($map, 'first', 'second', 500);
+        $expected: (
+            'first': (
+                'second': 500,
+                'third': 'testing',
+                'fourth': 500px,
+            ),
+            'fifth': 'test'
+        );
+
+        @include assert-equal($actual, $expected,
+            'Set a value to deep nested map.'
+        );
+    }
+}
+
+@include test-module('map-has-keys') {
+    @include test('should return true if the requested keys from a map exists') {
+        $actual: map-has-keys($map, 'first', 'fifth');
+        $expected: true;
+
+        @include assert-equal($actual, $expected,
+            'Return true if a deep key exists.'
+        );
+    }
+
+    @include test('should return false if the requested keys from a map doesn\'t exists') {
+        $actual: map-has-keys($map, 'first', 'second');
+        $expected: false;
+
+        @include assert-equal($actual, $expected,
+            'Return true if a deep key exists.'
+        );
+    }
+}
+
+@include test-module('map-has-nested-keys') {
+    @include test('should return true if the requested keys from a deeply nested map exists') {
+        $actual: map-has-nested-keys($map, 'first', 'second');
+        $expected: true;
+
+        @include assert-equal($actual, $expected,
+            'Return true if map got all \'$keys\' nested with each others.'
+        );
+    }
+
+    @include test('should return false if the requested keys from a deeply nested map doesn\'t exists') {
+        $actual: map-has-nested-keys($map, 'first', 'fifth');
+        $expected: false;
+
+        @include assert-equal($actual, $expected,
+            'Return true if map got all \'$keys\' nested with each others.'
+        );
+    }
+}
+
+@include test-module('map-depth') {
+    @include test('should return the depth level of athe deeply nested map') {
+        $actual: map-depth($map);
+        $expected: 2;
+
+        @include assert-equal($actual, $expected,
+            'Return the level of depth the map has.'
+        );
+    }
+}
+
+@include test-module('map-extend') {
+    @include test('should return a merged map of 2 or more maps') {
+        $actual: map-extend($map, ('sixth': 200), ('seveth': 150));
+        $expected: (
+            'first': (
+                'second': 100,
+                'third': 'testing',
+                'fourth': 500px,
+            ),
+            'fifth': 'test',
+            'sixth': 200,
+            'seveth': 150
+        );
+
+        @include assert-equal($actual, $expected,
+            'Return a merged map of 2 or more maps'
+        );
+    }
+
+    @include test('should return a merged map of 2 or more deeply nested maps') {
+        $actual: map-extend($map, ('first': ('second': 500)), ('sixth': 200), ('seveth': 150), true);
+        $expected: (
+            'first': (
+                'second': 500,
+                'third': 'testing',
+                'fourth': 500px,
+            ),
+            'fifth': 'test',
+            'sixth': 200,
+            'seveth': 150
+        );
+
+        @include assert-equal($actual, $expected,
+            'Return a merged map of 2 or more maps'
+        );
+    }
+}
+
+@include test-module('map-zip') {
+    @include test('should return a merged map from a list of keys and a list of values') {
+        $actual: map-zip(('first', 'fifth'), (('second': 100, 'third': 'testing', 'fourth': 500px), 'test'));
+        $expected: (
+            'first': (
+                'second': 100,
+                'third': 'testing',
+                'fourth': 500px,
+            ),
+            'fifth': 'test',
+        );
+
+        @include assert-equal($actual, $expected,
+            'Return a map with merged lists of keys and values.'
+        );
+    }
+}
+
+@include test-module('map-combine') {
+    @include test('should return a merged map from a list of keys and a list of values') {
+        $actual: map-combine(('first', 'fifth'), 'test');
+        $expected: (
+            'first': 'test',
+            'fifth': 'test',
+        );
+
+        @include assert-equal($actual, $expected,
+            'Return a map with combined lists of keys and values.'
+        );
+    }
+}
+
+// String
+// ------
+
+@include test-module('str-replace') {
+    @include test('should return a string with replaced substring') {
+        $actual: str-replace('hello you', 'you', 'world');
+        $expected: 'hello world';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with replaced characters.'
+        );
+    }
+}
+
+@include test-module('str-escape') {
+    @include test('should return a escaped string') {
+        $actual: str-escape('hello world.');
+        $expected: 'hello world\\.';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with escaped characters.'
+        );
+    }
+}
+
+@include test-module('str-escape') {
+    @include test('should return a escaped string') {
+        $actual: str-escape('hello world.');
+        $expected: 'hello world\\.';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with escaped characters.'
+        );
+    }
+}
+
+@include test-module('str-append') {
+    @include test('should return a string with an appended substring') {
+        $actual: str-append('hello', 'world');
+        $expected: 'helloworld';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with appended substring.'
+        );
+    }
+
+    @include test('should return a string with an appended substring prepend by a seperator') {
+        $actual: str-append('hello', 'world', ' ');
+        $expected: 'hello world';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with appended substring.'
+        );
+    }
+
+    @include test('should return a string with an appended substring without seperator if string empty') {
+        $actual: str-append('', 'world', ' ');
+        $expected: 'world';
+
+        @include assert-equal($actual, $expected,
+            'Return a string with appended substring.'
+        );
+    }
+}
+
+@include test-module('str-transform') {
+    @include test('should return the transform string') {
+        $actual: str-transform('rotate', 10deg);
+        $expected: 'rotate(10deg)';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transform string option.'
+        );
+    }
+
+    @include test('should modify x to transalteX and return the transform string') {
+        $actual: str-transform('x', 10);
+        $expected: 'translateX(10)';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transform string option.'
+        );
+    }
+
+    @include test('should modify y to transalteY and return the transform string') {
+        $actual: str-transform('y', 10);
+        $expected: 'translateY(10)';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transform string option.'
+        );
+    }
+}
+
+@include test-module('str-transforms') {
+    @include test('should return none if the only passed value is a default') {
+        $actual: str-transforms(('y': 0));
+        $expected: none;
+
+        @include assert-equal($actual, $expected,
+            'Return true if the value is transform initial value.'
+        );
+    }
+
+    @include test('should return the transform string with value') {
+        $actual: str-transforms(('x': 10, 'scaleX': 10));
+        $expected: 'translateX(10) scaleX(10)';
+
+        @include assert-equal($actual, $expected,
+            'Return true if the value is transform initial value.'
+        );
+    }
+
+    @include test('should return the transform string with value and ignore the default value') {
+        $actual: str-transforms(('y': 0, 'x': 10, 'scaleX': 10));
+        $expected: 'translateX(10) scaleX(10)';
+
+        @include assert-equal($actual, $expected,
+            'Return true if the value is transform initial value.'
+        );
+    }
+}
+
+@include test-module('str-transition') {
+    @include test('should return the transition string') {
+        $actual: str-transition(('property': 'all', 'duration': 1s));
+        $expected: 'all 1s';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+
+    @include test('should return the full transition string in proper order') {
+        $actual: str-transition(('property': 'all', 'delay': 1s, 'function': 'ease', 'duration': 1s));
+        $expected: 'all 1s ease 1s';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+
+    @include test('should ignore unrelated keys and return the transition string') {
+        $actual: str-transition(('property': 'all', 'duration': 1s, 'test': 'unrelated'));
+        $expected: 'all 1s';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+
+    @include test('should return none if no related keys') {
+        $actual: str-transition(('unrelated-key': 1s, 'unrelated': 'test'));
+        $expected: none;
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+}
+
+@include test-module('str-transitions') {
+    @include test('should return none if the only passed value is a list of unrelated keys') {
+        $actual: str-transitions((('unrelated-key': 1s, 'unrelated': 'test'), ('unrelated-key': 1s, 'unrelated': 'test')));
+        $expected: none;
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+
+    @include test('should return the full transitions string in proper order') {
+        $actual: str-transitions((('property': 'height', 'delay': 1s, 'function': 'ease', 'duration': 1s), ('property': 'width', 'function': 'ease', 'delay': 1s, 'duration': 1s)));
+        $expected: 'height 1s ease 1s,width 1s ease 1s';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+
+    @include test('should ignore unrelated keys and return the transition string') {
+        $actual: str-transitions((('property': 'height', 'unrelated': 1s, 'no-function': 'ease', 'duration': 1s), ('property': 'width', 'function': 'ease', 'delay': 1s, 'duration': 1s)));
+        $expected: 'height 1s,width 1s ease 1s';
+
+        @include assert-equal($actual, $expected,
+            'Outputs the transition string option.'
+        );
+    }
+}
+
+@include test-module('is-transform-initial') {
+    @include test('should return a true if the value is an intial value') {
+        $actual: is-transform-initial('y', 0);
+        $expected: true;
+
+        @include assert-equal($actual, $expected,
+            'Return true if the value is transform initial value.'
+        );
+    }
+
+    @include test('should return false if the value isn\'t an intial value') {
+        $actual: is-transform-initial('degrees', 10deg);
+        $expected: false;
+
+        @include assert-equal($actual, $expected,
+            'Return true if the value is transform initial value.'
+        );
+    }
+}

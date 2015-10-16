@@ -1,0 +1,1101 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Global
+// ======
+
+// Default value used as include for every animations unless otherwise specified.
+// Set to false if you wish to only use the mixins
+// or include specific animations classes using the .
+// $tribar-include-class: true;
+
+// Default properties used for all animations.
+// If you need to change the properties for only a certain
+// animation use the respective $tribar-{animation name}-properties.
+// Example: (
+// 		'count': 1,
+//		'delay': 0s
+// );
+// $tribar-default-properties: ();
+
+// Default extensions used for all animations.
+// If you need to change the extensions for only a certain
+// animation use the respective $tribar-{animation name}-extensions.
+// Example: (
+// 		'delay': (
+// 			'500ms': 500ms,
+// 			'one-second': 1s
+// 		)
+// );
+// Returns .{animation name}.delay-500ms and .{animation name}.delay-one-second
+// with their respective values given.
+// $tribar-default-extensions: ();
+
+
+// Attention Seekers
+// =================
+
+// Include the group animations class.
+// $tribar-include-attention-seekers-class: $tribar-include-class;
+
+// Set the the group animations properties and extensions.
+// $tribar-attention-seekers-properties: $tribar-default-properties;
+// $tribar-attention-seekers-extensions: $tribar-default-extensions;
+
+// Bounce
+// ------
+
+// Include the animation class.
+// $tribar-include-bounce-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-properties: $tribar-attention-seekers-properties
+// $tribar-bounce-extensions: $tribar-attention-seekers-extensions;
+
+// Set the bounce height.
+// $tribar-bounce-height: 30px;
+
+// Flash
+// -----
+
+// Include the animation class.
+// $tribar-include-flash-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flash-properties: $tribar-attention-seekers-properties
+// $tribar-flash-extensions: $tribar-attention-seekers-extensions;
+
+// Set the flash opacity max and min.
+// $tribar-flash-opacity-max: 1;
+// $tribar-flash-opacity-min: 0;
+
+// Jello
+// -----
+
+// Include the animation class.
+// $tribar-include-jello-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-jello-properties: $tribar-attention-seekers-properties
+// $tribar-jello-extensions: $tribar-attention-seekers-extensions;
+
+// Pulse
+// -----
+
+// Include the animation class.
+// $tribar-include-pulse-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-pulse-properties: $tribar-attention-seekers-properties
+// $tribar-pulse-extensions: $tribar-attention-seekers-extensions;
+
+// Set the pulse scale.
+// $tribar-pulse-scale: 1.1;
+
+// Rubber Band
+// -----------
+
+// Include the animation class.
+// $tribar-include-rubber-band-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rubber-band-properties: $tribar-attention-seekers-properties
+// $tribar-rubber-band-extensions: $tribar-attention-seekers-extensions;
+
+// Set the rubber band initial strecth.
+// $tribar-rubber-band-stretch: 1.25;
+
+// Shake
+// -----
+
+// Include the animation class.
+// $tribar-include-shake-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-shake-properties: $tribar-attention-seekers-properties
+// $tribar-shake-extensions: $tribar-attention-seekers-extensions;
+
+// Set the shake size.
+// $tribar-shake-size: 10px;
+
+// Swing
+// -----
+
+// Include the animation class.
+// $tribar-include-swing-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-swing-properties: $tribar-attention-seekers-properties
+// $tribar-swing-extensions: $tribar-attention-seekers-extensions;
+
+// Set the swing degree.
+// $tribar-swing-degree: 15deg;
+
+// Tada
+// ----
+
+// Include the animation class.
+// $tribar-include-tada-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-tada-properties: $tribar-attention-seekers-properties
+// $tribar-tada-extensions: $tribar-attention-seekers-extensions;
+
+// Set the tada scale and rotation.
+// $tribar-tada-scale: 1.1;
+// $tribar-tada-rotation: 3deg;
+
+// Wobble
+// ------
+
+// Include the animation class.
+// $tribar-include-wobble-class: $tribar-include-attention-seekers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-wobble-properties: $tribar-attention-seekers-properties
+// $tribar-wobble-extensions: $tribar-attention-seekers-extensions;
+
+// Set the wobble translation and degree.
+// $tribar-wobble-translate: 25%;
+// $tribar-wobble-degree: 5deg;
+
+
+// Bouncing Entrances
+// ==================
+
+// Include the group animations class.
+// $tribar-include-bouncing-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-bouncing-entrances-properties: $tribar-default-properties;
+// $tribar-bouncing-entrances-extensions: $tribar-default-extensions;
+
+// Bounce In Down
+// --------------
+
+// Include the animation class.
+// $tribar-include-bounce-in-down-class: $tribar-include-bouncing-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-in-down-properties: $tribar-bouncing-entrances-properties;
+// $tribar-bounce-in-down-extensions: $tribar-bouncing-entrances-extensions;
+
+// Set the bounce in down start height.
+// $tribar-bounce-in-down-start: 3000px;
+
+// Bounce In Left
+// --------------
+
+// Include the animation class.
+// $tribar-include-bounce-in-left-class: $tribar-include-bouncing-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-in-left-properties: $tribar-bouncing-entrances-properties;
+// $tribar-bounce-in-left-extensions: $tribar-bouncing-entrances-extensions;
+
+// Set the bounce in left start width.
+// $tribar-bounce-in-left-start: 3000px;
+
+// Bounce In Right
+// ---------------
+
+// Include the animation class.
+// $tribar-include-bounce-in-right-class: $tribar-include-bouncing-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-in-right-properties: $tribar-bouncing-entrances-properties;
+// $tribar-bounce-in-right-extensions: $tribar-bouncing-entrances-extensions;
+
+// Set the bounce in right start width.
+// $tribar-bounce-in-right-start: 3000px;
+
+// Bounce In Up
+// ------------
+
+// Include the animation class.
+// $tribar-include-bounce-in-up-class: $tribar-include-bouncing-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-in-up-properties: $tribar-bouncing-entrances-properties;
+// $tribar-bounce-in-up-extensions: $tribar-bouncing-entrances-extensions;
+
+// Set the bounce in up start height.
+// $tribar-bounce-in-up-start: 3000px;
+
+// Bounce In
+// ---------
+
+// Include the animation class.
+// $tribar-include-bounce-in-class: $tribar-include-bouncing-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-in-properties: $tribar-bouncing-entrances-properties;
+// $tribar-bounce-in-extensions: $tribar-bouncing-entrances-extensions;
+
+// Set the bounce in scale.
+// $tribar-bounce-in-scale: 1.125;
+
+
+// Bouncing Exits
+// ==============
+
+// Include the group animations class.
+// $tribar-include-bouncing-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-bouncing-exits-properties: $tribar-default-properties;
+// $tribar-bouncing-exits-extensions: $tribar-default-extensions;
+
+// Bounce Out Down
+// ---------------
+
+// Include the animation class.
+// $tribar-include-bounce-out-down-class: $tribar-include-bouncing-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-out-down-properties: $tribar-bouncing-exits-extensions;
+// $tribar-bounce-out-down-extensions: $tribar-bouncing-exits-extensions;
+
+// Set the bounce out down end height.
+// $tribar-bounce-out-down-end: 3000px;
+
+// Bounce Out Left
+// ---------------
+
+// Include the animation class.
+// $tribar-include-bounce-out-left-class: $tribar-include-bouncing-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-out-left-properties: $tribar-bouncing-exits-extensions;
+// $tribar-bounce-out-left-extensions: $tribar-bouncing-exits-extensions;
+
+// Set the bounce out left end width.
+// $tribar-bounce-out-left-end: 3000px;
+
+// Bounce Out Right
+// ----------------
+
+// Include the animation class.
+// $tribar-include-bounce-out-right-class: $tribar-include-bouncing-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-out-right-properties: $tribar-bouncing-exits-extensions;
+// $tribar-bounce-out-right-extensions: $tribar-bouncing-exits-extensions;
+
+// Set the bounce out right end width.
+// $tribar-bounce-out-right-end: 3000px;
+
+// Bounce Out Up
+// -------------
+
+// Include the animation class.
+// $tribar-include-bounce-out-up-class: $tribar-include-bouncing-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-out-up-properties: $tribar-bouncing-exits-extensions;
+// $tribar-bounce-out-up-extensions: $tribar-bouncing-exits-extensions;
+
+// Set the bounce out up end height.
+// $tribar-bounce-out-up-end: 3000px;
+
+// Bounce Out
+// ----------
+
+// Include the animation class.
+// $tribar-include-bounce-out-class: $tribar-include-bouncing-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-bounce-out-properties: $tribar-bouncing-exits-extensions;
+// $tribar-bounce-out-extensions: $tribar-bouncing-exits-extensions;
+
+// Set the bounce out up scale.
+// $tribar-bounce-out-scale: 1.125;
+
+
+// Fading Entrances
+// ================
+
+// Include the group animations class.
+// $tribar-include-fading-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-fading-entrances-properties: $tribar-default-properties;
+// $tribar-fading-entrances-extensions: $tribar-default-extensions;
+
+// Fade In Down
+// ------------
+
+// Include the animation class.
+// $tribar-include-fade-in-down-class: $tribar-include-fading-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-in-down-properties: $tribar-fading-entrances-properties;
+// $tribar-fade-in-down-extensions: $tribar-fading-entrances-extensions;
+
+// Set the fade in down start height.
+// $tribar-fade-in-down-start: 100%;
+
+// Fade In Left
+// ------------
+
+// Include the animation class.
+// $tribar-include-fade-in-left-class: $tribar-include-fading-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-in-left-properties: $tribar-fading-entrances-properties;
+// $tribar-fade-in-left-extensions: $tribar-fading-entrances-extensions;
+
+// Set the fade in left start width.
+// $tribar-fade-in-left-start: 100%;
+
+// Fade In Right
+// -------------
+
+// Include the animation class.
+// $tribar-include-fade-in-right-class: $tribar-include-fading-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-in-right-properties: $tribar-fading-entrances-properties;
+// $tribar-fade-in-right-extensions: $tribar-fading-entrances-extensions;
+
+// Set the fade in right start width.
+// $tribar-fade-in-right-start: 100%;
+
+// Fade In Up
+// ----------
+
+// Include the animation class.
+// $tribar-include-fade-in-up-class: $tribar-include-fading-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-in-up-properties: $tribar-fading-entrances-properties;
+// $tribar-fade-in-up-extensions: $tribar-fading-entrances-extensions;
+
+// Set the fade in up start height.
+// $tribar-fade-in-up-start: 100%;
+
+// Fade In
+// -------
+
+// Include the animation class.
+// $tribar-include-fade-in-class: $tribar-include-fading-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-in-properties: $tribar-fading-entrances-properties;
+// $tribar-fade-in-extensions: $tribar-fading-entrances-extensions;
+
+// Set the fade in opacity start and end.
+// $tribar-fade-in-opacity-start: 0;
+// $tribar-fade-in-opacity-end: 1;
+
+// Fading Exits
+// ============
+
+// Include the group animations class.
+// $tribar-include-fading-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-fading-exits-properties: $tribar-default-properties;
+// $tribar-fading-exits-extensions: $tribar-default-extensions;
+
+// Fade Out Down
+// -------------
+
+// Include the animation class.
+// $tribar-include-fade-out-down-class: $tribar-include-fading-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-out-down-properties: $tribar-fading-exits-properties;
+// $tribar-fade-out-down-extensions: $tribar-fading-exits-extensions;
+
+// Set the fade out down end height.
+// $tribar-fade-out-down-end: 100%;
+
+// Fade Out Left
+// -------------
+
+// Include the animation class.
+// $tribar-include-fade-out-left-class: $tribar-include-fading-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-out-left-properties: $tribar-fading-exits-properties;
+// $tribar-fade-out-left-extensions: $tribar-fading-exits-extensions;
+
+// Set the fade out left end width.
+// $tribar-fade-out-left-end: 100%;
+
+// Fade Out Right
+// --------------
+
+// Include the animation class.
+// $tribar-include-fade-out-right-class: $tribar-include-fading-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-out-right-properties: $tribar-fading-exits-properties;
+// $tribar-fade-out-right-extensions: $tribar-fading-exits-extensions;
+
+// Set the fade out right end width.
+// $tribar-fade-out-right-end: 100%;
+
+// Fade Out Up
+// -----------
+
+// Include the animation class.
+// $tribar-include-fade-out-up-class: $tribar-include-fading-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-out-up-properties: $tribar-fading-exits-properties;
+// $tribar-fade-out-up-extensions: $tribar-fading-exits-extensions;
+
+// Set the fade out up end height.
+// $tribar-fade-out-up-end: 100%;
+
+// Fade Out
+// --------
+
+// Include the animation class.
+// $tribar-include-fade-out-class: $tribar-include-fading-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-fade-out-properties: $tribar-fading-exits-properties;
+// $tribar-fade-out-extensions: $tribar-fading-exits-extensions;
+
+// Set the fade out opacity start and end.
+// $tribar-fade-out-opacity-start: 1;
+// $tribar-fade-out-opacity-end: 0;
+
+
+// Flippers
+// ========
+
+// Include the group animations class.
+// $tribar-include-flippers-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-flippers-properties: $tribar-default-properties;
+// $tribar-flippers-extensions: $tribar-default-extensions;
+
+// Flip
+// ----
+
+// Include the animation class.
+// $tribar-include-flip-class: $tribar-include-flippers-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flip-properties: vitalize-flippers-properties;
+// $tribar-flip-extensions: $tribar-flippers-extensions;
+
+// Set the flip perspective size.
+// $tribar-flip-perspective: 400px;
+// $tribar-flip-reverse: false;
+
+
+// Flipping Entrances
+// ================
+
+// Include the group animations class.
+// $tribar-include-flipping-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-flipping-entrances-properties: $tribar-default-properties;
+// $tribar-flipping-entrances-extensions: $tribar-default-extensions;
+
+// Flip In X
+// ---------
+
+// Include the animation class.
+// $tribar-include-flip-in-x-class: $tribar-include-flipping-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flip-in-x-properties: $tribar-flipping-entrances-properties;
+// $tribar-flip-in-x-extensions: $tribar-flipping-entrances-extensions;
+
+// Set the flip in x perspective size.
+// $tribar-flip-in-x-perspective: 400px;
+// $tribar-flip-in-x-reverse: false;
+
+// Flip In Y
+// ---------
+
+// Include the animation class.
+// $tribar-include-flip-in-y-class: $tribar-include-flipping-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flip-in-y-properties: $tribar-flipping-entrances-properties;
+// $tribar-flip-in-y-extensions: $tribar-flipping-entrances-extensions;
+
+// Set the flip in y perspective size.
+// $tribar-flip-in-y-perspective: 400px;
+// $tribar-flip-in-y-reverse: false;
+
+
+// Flipping Exits
+// ==============
+
+// Include the group animations class.
+// $tribar-include-flipping-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-flipping-exits-properties: $tribar-default-properties;
+// $tribar-flipping-exits-extensions: $tribar-default-extensions;
+
+// Flip Out X
+// ----------
+
+// Include the animation class.
+// $tribar-include-flip-out-x-class: $tribar-include-flipping-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flip-out-x-properties: $tribar-flipping-exits-properties;
+// $tribar-flip-out-x-extensions: $tribar-flipping-exits-extensions;
+
+// Set the flip out x perspective size.
+// $tribar-flip-out-x-perspective: 400px;
+// $tribar-flip-out-x-reverse: false;
+
+// Flip Out Y
+// ----------
+
+// Include the animation class.
+// $tribar-include-flip-out-y-class: $tribar-include-flipping-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-flip-out-y-properties: $tribar-flipping-exits-properties;
+// $tribar-flip-out-y-extensions: $tribar-flipping-exits-extensions;
+
+// Set the flip out y perspective size.
+// $tribar-flip-out-y-perspective: 400px;
+// $tribar-flip-out-y-reverse: false;
+
+
+// Lightspeed
+// ===========
+
+// Include the group animations class.
+// $tribar-include-lightspeed-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-lightspeed-properties: $tribar-default-properties;
+// $tribar-lightspeed-extensions: $tribar-default-extensions;
+
+// Lightspeed In
+// -------------
+
+// Include the animation class.
+// $tribar-include-lightspeed-in-class: $tribar-include-lightspeed-class;
+
+// Set the animation default properties and extensions.
+// $tribar-lightspeed-in-properties: $tribar-lightspeed-properties;
+// $tribar-lightspeed-in-extensions: $tribar-lightspeed-extensions;
+
+// Set the lightspeed in start and reverse.
+// $tribar-lightspeed-in-start: 100%;
+// $tribar-lightspeed-in-reverse: false;
+
+// Lightspeed Out
+// --------------
+
+// Include the animation class.
+// $tribar-include-lightspeed-out-class: $tribar-include-lightspeed-class;
+
+// Set the animation default properties and extensions.
+// $tribar-lightspeed-out-properties: $tribar-lightspeed-properties;
+// $tribar-lightspeed-out-extensions: $tribar-lightspeed-extensions;
+
+// Set the lightspeed out end and reverse.
+// $tribar-lightspeed-out-end: 100%;
+// $tribar-lightspeed-out-reverse: false;
+
+
+// Rolling Entrances
+// =================
+
+// Include the group animations class.
+// $tribar-include-rolling-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-rolling-entrances-properties: $tribar-default-properties;
+// $tribar-rolling-entrances-extensions: $tribar-default-extensions;
+
+// Roll In Left
+// ------------
+
+// Include the animation class.
+// $tribar-include-roll-in-left-class: $tribar-include-rolling-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-roll-in-left-properties: $tribar-rolling-entrances-properties;
+// $tribar-roll-in-left-extensions: $tribar-rolling-entrances-extensions;
+
+// Set the roll in left start, degree and reverse.
+// $tribar-roll-in-left-start: 100%;
+// $tribar-roll-in-left-degree: 120deg;
+// $tribar-roll-in-left-reverse: false;
+
+// Roll In Right
+// -------------
+
+// Include the animation class.
+// $tribar-include-roll-in-right-class: $tribar-include-rolling-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-roll-in-right-properties: $tribar-rolling-entrances-properties;
+// $tribar-roll-in-right-extensions: $tribar-rolling-entrances-extensions;
+
+// Set the roll in right start, degree and reverse.
+// $tribar-roll-in-right-start: 100%;
+// $tribar-roll-in-right-degree: 120deg;
+// $tribar-roll-in-right-reverse: false;
+
+
+// Rolling Exits
+// =============
+
+// Include the group animations class.
+// $tribar-include-rolling-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-rolling-exits-properties: $tribar-default-properties;
+// $tribar-rolling-exits-extensions: $tribar-default-extensions;
+
+// Roll Out Left
+// -------------
+
+// Include the animation class.
+// $tribar-include-roll-out-left-class: $tribar-include-rolling-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-roll-out-left-properties: $tribar-rolling-exits-properties;
+// $tribar-roll-out-left-extensions: $tribar-rolling-exits-extensions;
+
+// Set the roll in left end, degree and reverse.
+// $tribar-roll-out-left-end: 100%;
+// $tribar-roll-out-left-degree: 120deg;
+// $tribar-roll-out-left-reverse: false;
+
+// Roll Out Right
+// --------------
+
+// Include the animation class.
+// $tribar-include-roll-out-right-class: $tribar-include-rolling-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-roll-out-right-properties: $tribar-rolling-exits-properties;
+// $tribar-roll-out-right-extensions: $tribar-rolling-exits-extensions;
+
+// Set the roll in right end, degree and reverse.
+// $tribar-roll-out-right-end: 100%;
+// $tribar-roll-out-right-degree: 120deg;
+// $tribar-roll-out-right-reverse: false;
+
+
+// Rotating Entrances
+// =================
+
+// Include the group animations class.
+// $tribar-include-rotating-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-rotating-entrances-properties: $tribar-default-properties;
+// $tribar-rotating-entrances-extensions: $tribar-default-extensions;
+
+// Rotate In Down
+// --------------
+
+// Include the animation class.
+// $tribar-include-rotate-in-down-class: $tribar-include-rotating-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-in-down-properties: $tribar-rotating-entrances-properties;
+// $tribar-rotate-in-down-extensions: $tribar-rotating-entrances-extensions;
+
+// Set the rotate in down degree and reverse.
+// $tribar-rotate-in-down-degree: 45deg;
+// $tribar-rotate-in-down-reverse: false;
+
+// Rotate In Up
+// ------------
+
+// Include the animation class.
+// $tribar-include-rotate-in-up-class: $tribar-include-rotating-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-in-up-properties: $tribar-rotating-entrances-properties;
+// $tribar-rotate-in-up-extensions: $tribar-rotating-entrances-extensions;
+
+// Set the rotate in up degree and reverse.
+// $tribar-rotate-in-up-degree: 45deg;
+// $tribar-rotate-in-up-reverse: false;
+
+// Rotate In
+// ---------
+
+// Include the animation class.
+// $tribar-include-rotate-in-class: $tribar-include-rotating-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-in-properties: $tribar-rotating-entrances-properties;
+// $tribar-rotate-in-extensions: $tribar-rotating-entrances-extensions;
+
+// Set the rotate in degree and reverse.
+// $tribar-rotate-in-degree: 200deg;
+// $tribar-rotate-in-reverse: false;
+
+
+// Rotating Exits
+// ==============
+
+// Include the group animations class.
+// $tribar-include-rotating-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-rotating-exits-properties: $tribar-default-properties;
+// $tribar-rotating-exits-extensions: $tribar-default-extensions;
+
+// Rotate Out Down
+// ---------------
+
+// Include the animation class.
+// $tribar-include-rotate-out-down-class: $tribar-include-rotating-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-out-down-properties: $tribar-rotating-exits-properties;
+// $tribar-rotate-out-down-extensions: $tribar-rotating-exits-extensions;
+
+// Set the rotate out down degree and reverse.
+// $tribar-rotate-out-down-degree: 45deg;
+// $tribar-rotate-out-down-reverse: false;
+
+// Rotate Out Up
+// -------------
+
+// Include the animation class.
+// $tribar-include-rotate-out-up-class: $tribar-include-rotating-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-out-up-properties: $tribar-rotating-exits-properties;
+// $tribar-rotate-out-up-extensions: $tribar-rotating-exits-extensions;
+
+// Set the rotate out up degree and reverse.
+// $tribar-rotate-out-up-degree: 45deg;
+// $tribar-rotate-out-up-reverse: false;
+
+// Rotate Out
+// ----------
+
+// Include the animation class.
+// $tribar-include-rotate-out-class: $tribar-include-rotating-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-rotate-out-properties: $tribar-rotating-exits-properties;
+// $tribar-rotate-out-extensions: $tribar-rotating-exits-extensions;
+
+// Set the rotate out degree and reverse.
+// $tribar-rotate-out-degree: 200deg;
+// $tribar-rotate-out-reverse: false;
+
+
+// Sliding Entrances
+// =================
+
+// Include the group animations class.
+// $tribar-include-sliding-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-sliding-entrances-properties: $tribar-default-properties;
+// $tribar-sliding-entrances-extensions: $tribar-default-extensions;
+
+// Slide In Down
+// -------------
+
+// Include the animation class.
+// $tribar-include-slide-in-down-class: $tribar-include-sliding-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-in-down-properties: $tribar-sliding-entrances-properties;
+// $tribar-slide-in-down-extensions: $tribar-sliding-entrances-extensions;
+
+// Set the slide in down start height.
+// $tribar-slide-in-down-start: 100%;
+
+// Slide In Left
+// -------------
+
+// Include the animation class.
+// $tribar-include-slide-in-left-class: $tribar-include-sliding-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-in-left-properties: $tribar-sliding-entrances-properties;
+// $tribar-slide-in-left-extensions: $tribar-sliding-entrances-extensions;
+
+// Set the slide in left start width.
+// $tribar-slide-in-left-start: 100%;
+
+// Slide In Right
+// --------------
+
+// Include the animation class.
+// $tribar-include-slide-in-right-class: $tribar-include-sliding-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-in-right-properties: $tribar-sliding-entrances-properties;
+// $tribar-slide-in-right-extensions: $tribar-sliding-entrances-extensions;
+
+// Set the slide in right start width.
+// $tribar-slide-in-right-start: 100%;
+
+// Slide In Up
+// -----------
+
+// Include the animation class.
+// $tribar-include-slide-in-up-class: $tribar-include-sliding-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-in-up-properties: $tribar-sliding-entrances-properties;
+// $tribar-slide-in-up-extensions: $tribar-sliding-entrances-extensions;
+
+// Set the slide in up start height.
+// $tribar-slide-in-up-start: 100%;
+
+
+// Sliding Exits
+// =============
+
+// Include the group animations class.
+// $tribar-include-sliding-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-sliding-exits-properties: $tribar-default-properties;
+// $tribar-sliding-exits-extensions: $tribar-default-extensions;
+
+// Slide Out Down
+// --------------
+
+// Include the animation class.
+// $tribar-include-slide-out-down-class: $tribar-include-sliding-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-out-down-properties: $tribar-sliding-exits-properties;
+// $tribar-slide-out-down-extensions: $tribar-sliding-exits-extensions;
+
+// Set the slide out down end height.
+// $tribar-slide-out-down-end: 100%;
+
+// Slide Out Left
+// --------------
+
+// Include the animation class.
+// $tribar-include-slide-out-left-class: $tribar-include-sliding-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-out-left-properties: $tribar-sliding-exits-properties;
+// $tribar-slide-out-left-extensions: $tribar-sliding-exits-extensions;
+
+// Set the slide out left end width.
+// $tribar-slide-out-left-end: 100%;
+
+// Slide Out Right
+// ---------------
+
+// Include the animation class.
+// $tribar-include-slide-out-right-class: $tribar-include-sliding-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-out-right-properties: $tribar-sliding-exits-properties;
+// $tribar-slide-out-right-extensions: $tribar-sliding-exits-extensions;
+
+// Set the slide out right end width.
+// $tribar-slide-out-right-end: 100%;
+
+// Slide Out Up
+// ------------
+
+// Include the animation class.
+// $tribar-include-slide-out-up-class: $tribar-include-sliding-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-slide-out-up-properties: $tribar-sliding-exits-properties;
+// $tribar-slide-out-up-extensions: $tribar-sliding-exits-extensions;
+
+// Set the slide out up end height.
+// $tribar-slide-out-up-end: 100%;
+
+
+// Specials
+// ========
+
+// Include the group animations class.
+// $tribar-include-specials-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-specials-properties: $tribar-default-properties;
+// $tribar-specials-extensions: $tribar-default-extensions;
+
+// Hinge
+// -----
+
+// Include the animation class.
+// $tribar-include-hinge-class: $tribar-include-specials-class;
+
+// Set the animation default properties and extensions.
+// $tribar-hinge-properties: vitalize-specials-properties;
+// $tribar-hinge-extensions: $tribar-specials-extensions;
+
+// Set the hinge end, degree and reverse.
+// $tribar-hinge-end: 700px;
+// $tribar-hinge-degree: 80deg;
+// $tribar-hinge-reverse: false;
+
+
+// Zooming Entrances
+// =================
+
+// Include the group animations class.
+// $tribar-include-zooming-entrances-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-zooming-entrances-properties: $tribar-default-properties;
+// $tribar-zooming-entrances-extensions: $tribar-default-extensions;
+
+// Zoom In Down
+// ------------
+
+// Include the animation class.
+// $tribar-include-zoom-in-down-class: $tribar-include-zooming-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-in-down-properties: $tribar-zooming-entrances-properties;
+// $tribar-zoom-in-down-extensions: $tribar-zooming-entrances-extensions;
+
+// Set the zoom in down start height.
+// $tribar-zoom-in-down-start: 1000px;
+
+// Zoom In Left
+// ------------
+
+// Include the animation class.
+// $tribar-include-zoom-in-left-class: $tribar-include-zooming-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-in-left-properties: $tribar-zooming-entrances-properties;
+// $tribar-zoom-in-left-extensions: $tribar-zooming-entrances-extensions;
+
+// Set the zoom in left start width.
+// $tribar-zoom-in-left-start: 1000px;
+
+// Zoom In Right
+// -------------
+
+// Include the animation class.
+// $tribar-include-zoom-in-right-class: $tribar-include-zooming-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-in-right-properties: $tribar-zooming-entrances-properties;
+// $tribar-zoom-in-right-extensions: $tribar-zooming-entrances-extensions;
+
+// Set the zoom in right start width.
+// $tribar-zoom-in-right-start: 1000px;
+
+// Zoom In Up
+// ----------
+
+// Include the animation class.
+// $tribar-include-zoom-in-up-class: $tribar-include-zooming-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-in-up-properties: $tribar-zooming-entrances-properties;
+// $tribar-zoom-in-up-extensions: $tribar-zooming-entrances-extensions;
+
+// Set the zoom in up start height.
+// $tribar-zoom-in-up-start: 1000px;
+
+// Zoom In
+// -------
+
+// Include the animation class.
+// $tribar-include-zoom-in-class: $tribar-include-zooming-entrances-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-in-properties: $tribar-zooming-entrances-properties;
+// $tribar-zoom-in-extensions: $tribar-zooming-entrances-extensions;
+
+// Set the zoom in scale.
+// $tribar-zoom-in-scale: .3;
+
+
+// Zooming Exits
+// =============
+
+// Include the group animations class.
+// $tribar-include-zooming-exits-class: $tribar-include-class;
+
+// Set the group animation default properties and extensions.
+// $tribar-zooming-exits-properties: $tribar-default-properties;
+// $tribar-zooming-exits-extensions: $tribar-default-extensions;
+
+// Zoom In Down
+// ------------
+
+// Include the animation class.
+// $tribar-include-zoom-out-down-class: $tribar-include-zooming-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-out-down-properties: $tribar-zooming-exits-properties;
+// $tribar-zoom-out-down-extensions: $tribar-zooming-exits-extensions;
+
+// Set the zoom out down start height.
+// $tribar-zoom-out-down-start: 1000px;
+
+// Zoom Out Left
+// -------------
+
+// Include the animation class.
+// $tribar-include-zoom-out-left-class: $tribar-include-zooming-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-out-left-properties: $tribar-zooming-exits-properties;
+// $tribar-zoom-out-left-extensions: $tribar-zooming-exits-extensions;
+
+// Set the zoom out left start width.
+// $tribar-zoom-out-left-start: 1000px;
+
+// Zoom Out Right
+// --------------
+
+// Include the animation class.
+// $tribar-include-zoom-out-right-class: $tribar-include-zooming-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-out-right-properties: $tribar-zooming-exits-properties;
+// $tribar-zoom-out-right-extensions: $tribar-zooming-exits-extensions;
+
+// Set the zoom out right start width.
+// $tribar-zoom-out-right-start: 1000px;
+
+// Zoom Out Up
+// -----------
+
+// Include the animation class.
+// $tribar-include-zoom-out-up-class: $tribar-include-zooming-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-out-up-properties: $tribar-zooming-exits-properties;
+// $tribar-zoom-out-up-extensions: $tribar-zooming-exits-extensions;
+
+// Set the zoom out up start height.
+// $tribar-zoom-out-up-start: 1000px;
+
+// Zoom Out
+// --------
+
+// Include the animation class.
+// $tribar-include-zoom-out-class: $tribar-include-zooming-exits-class;
+
+// Set the animation default properties and extensions.
+// $tribar-zoom-out-properties: $tribar-zooming-exits-properties;
+// $tribar-zoom-out-extensions: $tribar-zooming-exits-extensions;
+
+// Set the zoom out scale.
+// $tribar-zoom-out-scale: .3;

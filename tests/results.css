@@ -1,0 +1,184 @@
+/* # map-deep-get ---------- */
+/* should return the value of the requested key from a deep nested map */
+[data-module="map-deep-get"] [data-test="should return the value of the requested key from a deep nested map"] .assert-equal {
+  -result: PASS;
+  -description: "Return the value from a deep nested map."; }
+
+/* # map-deep-set ---------- */
+/* should set the value of the requested key from a deep nested map */
+[data-module="map-deep-set"] [data-test="should set the value of the requested key from a deep nested map"] .assert-equal {
+  -result: PASS;
+  -description: "Set a value to deep nested map."; }
+
+/* # map-has-keys ---------- */
+/* should return true if the requested keys from a map exists */
+[data-module="map-has-keys"] [data-test="should return true if the requested keys from a map exists"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if a deep key exists."; }
+
+/* should return false if the requested keys from a map doesn't exists */
+[data-module="map-has-keys"] [data-test="should return false if the requested keys from a map doesn't exists"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if a deep key exists."; }
+
+/* # map-has-nested-keys ---------- */
+/* should return true if the requested keys from a deeply nested map exists */
+[data-module="map-has-nested-keys"] [data-test="should return true if the requested keys from a deeply nested map exists"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if map got all '$keys' nested with each others."; }
+
+/* should return false if the requested keys from a deeply nested map doesn't exists */
+[data-module="map-has-nested-keys"] [data-test="should return false if the requested keys from a deeply nested map doesn't exists"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if map got all '$keys' nested with each others."; }
+
+/* # map-depth ---------- */
+/* should return the depth level of athe deeply nested map */
+[data-module="map-depth"] [data-test="should return the depth level of athe deeply nested map"] .assert-equal {
+  -result: PASS;
+  -description: "Return the level of depth the map has."; }
+
+/* # map-extend ---------- */
+/* should return a merged map of 2 or more maps */
+[data-module="map-extend"] [data-test="should return a merged map of 2 or more maps"] .assert-equal {
+  -result: PASS;
+  -description: "Return a merged map of 2 or more maps"; }
+
+/* should return a merged map of 2 or more deeply nested maps */
+[data-module="map-extend"] [data-test="should return a merged map of 2 or more deeply nested maps"] .assert-equal {
+  -result: PASS;
+  -description: "Return a merged map of 2 or more maps"; }
+
+/* # map-zip ---------- */
+/* should return a merged map from a list of keys and a list of values */
+[data-module="map-zip"] [data-test="should return a merged map from a list of keys and a list of values"] .assert-equal {
+  -result: PASS;
+  -description: "Return a map with merged lists of keys and values."; }
+
+/* # map-combine ---------- */
+/* should return a merged map from a list of keys and a list of values */
+[data-module="map-combine"] [data-test="should return a merged map from a list of keys and a list of values"] .assert-equal {
+  -result: PASS;
+  -description: "Return a map with combined lists of keys and values."; }
+
+/* # str-replace ---------- */
+/* should return a string with replaced substring */
+[data-module="str-replace"] [data-test="should return a string with replaced substring"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with replaced characters."; }
+
+/* # str-escape ---------- */
+/* should return a escaped string */
+[data-module="str-escape"] [data-test="should return a escaped string"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with escaped characters."; }
+
+/* # str-escape ---------- */
+/* should return a escaped string */
+[data-module="str-escape"] [data-test="should return a escaped string"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with escaped characters."; }
+
+/* # str-append ---------- */
+/* should return a string with an appended substring */
+[data-module="str-append"] [data-test="should return a string with an appended substring"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with appended substring."; }
+
+/* should return a string with an appended substring prepend by a seperator */
+[data-module="str-append"] [data-test="should return a string with an appended substring prepend by a seperator"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with appended substring."; }
+
+/* should return a string with an appended substring without seperator if string empty */
+[data-module="str-append"] [data-test="should return a string with an appended substring without seperator if string empty"] .assert-equal {
+  -result: PASS;
+  -description: "Return a string with appended substring."; }
+
+/* # str-transform ---------- */
+/* should return the transform string */
+[data-module="str-transform"] [data-test="should return the transform string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transform string option."; }
+
+/* should modify x to transalteX and return the transform string */
+[data-module="str-transform"] [data-test="should modify x to transalteX and return the transform string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transform string option."; }
+
+/* should modify y to transalteY and return the transform string */
+[data-module="str-transform"] [data-test="should modify y to transalteY and return the transform string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transform string option."; }
+
+/* # str-transforms ---------- */
+/* should return none if the only passed value is a default */
+[data-module="str-transforms"] [data-test="should return none if the only passed value is a default"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if the value is transform initial value."; }
+
+/* should return the transform string with value */
+[data-module="str-transforms"] [data-test="should return the transform string with value"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if the value is transform initial value."; }
+
+/* should return the transform string with value and ignore the default value */
+[data-module="str-transforms"] [data-test="should return the transform string with value and ignore the default value"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if the value is transform initial value."; }
+
+/* # str-transition ---------- */
+/* should return the transition string */
+[data-module="str-transition"] [data-test="should return the transition string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* should return the full transition string in proper order */
+[data-module="str-transition"] [data-test="should return the full transition string in proper order"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* should ignore unrelated keys and return the transition string */
+[data-module="str-transition"] [data-test="should ignore unrelated keys and return the transition string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* should return none if no related keys */
+[data-module="str-transition"] [data-test="should return none if no related keys"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* # str-transitions ---------- */
+/* should return none if the only passed value is a list of unrelated keys */
+[data-module="str-transitions"] [data-test="should return none if the only passed value is a list of unrelated keys"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* should return the full transitions string in proper order */
+[data-module="str-transitions"] [data-test="should return the full transitions string in proper order"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* should ignore unrelated keys and return the transition string */
+[data-module="str-transitions"] [data-test="should ignore unrelated keys and return the transition string"] .assert-equal {
+  -result: PASS;
+  -description: "Outputs the transition string option."; }
+
+/* # is-transform-initial ---------- */
+/* should return a true if the value is an intial value */
+[data-module="is-transform-initial"] [data-test="should return a true if the value is an intial value"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if the value is transform initial value."; }
+
+/* should return false if the value isn't an intial value */
+[data-module="is-transform-initial"] [data-test="should return false if the value isn't an intial value"] .assert-equal {
+  -result: PASS;
+  -description: "Return true if the value is transform initial value."; }
+
+/* # SUMMARY ---------- */
+/* "32 Tests:" */
+/* " - 32 Passed" */
+/* " - 0 Failed" */
+/* -------------------- */
+
+/*# sourceMappingURL=results.css.map */

@@ -1,0 +1,26 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// To Crosses
+// ==========
+@import '../../core/global';
+
+// Class
+// -----
+$tribar-include-to-crosses-class: $tribar-include-class !default;
+
+// Properties
+// ----------
+$tribar-to-crosses-properties: $tribar-default-properties !default;
+$tribar-properties: map-extend($tribar-default-properties, $tribar-properties, true);
+
+// To Cross
+// --------
+// - The to cross mixins
+// - @param map $options
+@mixin to-cross($options: ()) {
+    $options: map-extend($tribar-properties, $options, true);
+
+}

@@ -1,0 +1,25 @@
+.tribar, .tribar:before, .tribar:after {
+  width: 30px;
+  height: 3px;
+  max-height: 3px;
+  background-color: #aaa;
+  border: 0px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 1s ease 0; }
+
+.tribar {
+  margin-top: 9px;
+  margin-bottom: 9px; }
+
+.tribar:before, .tribar:after {
+  position: absolute;
+  content: ''; }
+
+.tribar:before {
+  top: -9px; }
+
+.tribar:after {
+  top: 9px; }
+
+/*# sourceMappingURL=tribar.css.map */

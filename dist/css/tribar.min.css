@@ -1,0 +1,1 @@
+.tribar,.tribar:after,.tribar:before{width:30px;height:3px;max-height:3px;background-color:#aaa;border:0 solid transparent;border-radius:0;box-shadow:none;transition:all 1s ease 0}.tribar{margin-top:9px;margin-bottom:9px}.tribar:after,.tribar:before{position:absolute;content:''}.tribar:before{top:-9px}.tribar:after{top:9px}

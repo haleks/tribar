@@ -1,0 +1,171 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Global
+// ======
+@import 'functions';
+
+// Variables
+// ---------
+
+// Generate the animations classes.
+$tribar-include-class: true !default;
+
+// Tribar global default map.
+// This map is used to merge missing map keys and values of each the
+// of the properties variables set in the settings.
+$tribar-global-properties: (
+    'width': 30px,
+    'thickness': 3px,
+    'gutter': 6px,
+    'radius': 0,
+    'shadow': none,
+    'color': #aaa,
+    'hover': darken(#aaa, 20%),
+    'transition': ((
+        'delay': 0,
+        'duration': 1s,
+        'function': 'ease',
+        'property': 'all'
+    )),
+) !global;
+
+// Set default for all animations and make sure all properties are merged.
+$tribar-default-properties: $tribar-global-properties !default;
+$tribar-default-properties: map-merge($tribar-global-properties, $tribar-default-properties);
+
+// Tribar global default map.
+// This map is used to merge missing map keys and values of each the
+// of the properties variables set in the settings.
+$tribar-global-transform-properties: (
+    'x': 0,
+    'y': 0,
+    'rotate': 0deg,
+    'scaleX': 1,
+    'scaleY': 1,
+    'matrix': (0, 0, 0, 0, 0, 0),
+    'matrix3d': (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+) !global;
+
+// Set default for all animations and make sure all properties are merged.
+$tribar-default-transform-properties: $tribar-global-transform-properties !default;
+$tribar-default-transform-properties: map-merge($tribar-global-transform-properties, $tribar-default-transform-properties);
+
+// Tribar global default map.
+// This map is used to merge missing map keys and values of each the
+// of the properties variables set in the settings.
+$tribar-global-transition-properties: map-get($tribar-default-properties, 'transition') !global;
+
+// Set default for all animations and make sure all properties are merged.
+$tribar-default-transition-properties: $tribar-global-transition-properties !default;
+$tribar-default-transition-properties: map-merge($tribar-global-transition-properties, $tribar-default-transition-properties);
+
+
+// Mixins
+// ======
+
+// Parts
+// =====
+
+// Tribar Parts
+// ------------
+// - Outputs all tribar parts.
+// - @param void
+@mixin tribar-parts {
+    &, &:before, &:after {
+        @content;
+    }
+}
+
+// Tribar Top
+// ----------
+// - Outputs tribar top part.
+// - @param void
+@mixin tribar-top {
+    &:before {
+        @content;
+    }
+}
+
+// Tribar Middle
+// -------------
+// - Outputs tribar middle part.
+// - @param void
+@mixin tribar-middle {
+    & {
+        @content;
+    }
+}
+
+// Tribar Bottom
+// -------------
+// - Outputs tribar bottom part.
+// - @param void
+@mixin tribar-bottom {
+    &:after {
+        @content;
+    }
+}
+
+// Tribar Edge
+// -----------
+// - Outputs tribar top and bottom part.
+// - @param void
+@mixin tribar-edge {
+    &:before, &:after {
+        @content;
+    }
+}
+
+
+// Tribar
+// ======
+
+// Set Tribar
+// ----------
+// - Outputs the prefixed tribar transform property.
+// - @param map $options
+@mixin tribar-set($options: ()) {
+    $options: map-extend($tribar-default-properties, $options, true);
+
+    $transform: str-transforms($options);
+
+    @include transform-set($options);
+}
+
+
+// Transform
+// =========
+
+// Set Transform
+// -------------
+// - Outputs the prefixed tribar transform property.
+// - @param map $options
+@mixin transform-set($options: ()) {
+    $options: map-extend($tribar-default-transform-properties, $options, true);
+
+    $transform: str-transforms($options);
+
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+// Transition
+// ==========
+
+// Set Transition
+// --------------
+// - Outputs the prefixed tribar transition property.
+// - @param map $options
+@mixin transition-set($options: ()) {
+    $options: map-extend($tribar-default-transition-properties, $options, true);
+
+    $transition: str-transitions($options);
+
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}

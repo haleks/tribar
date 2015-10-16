@@ -1,0 +1,68 @@
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Tribar
+// ======
+@import '../core/global';
+
+// Class
+// -----
+$tribar-include-tribar-class: $tribar-include-class !default;
+
+// Properties
+// ----------
+$tribar-properties: $tribar-default-properties !default;
+$tribar-properties: map-extend($tribar-default-properties, $tribar-properties, true);
+
+// Tribar
+// ------
+// - The tribar mixins
+// - @param map $options
+@mixin tribar($options: ()) {
+	$options: map-extend($tribar-properties, $options, true);
+
+	@include tribar-parts {
+		width: map-get($options, 'width');
+		height: map-get($options, 'thickness');
+		max-height: map-get($options, 'thickness');
+
+		background-color: map-get($options, 'color');
+
+		border: 0px solid transparent;
+	    border-radius: map-get($options, 'radius');
+
+		box-shadow: map-get($options, 'shadow');
+
+		@include transition-set(map-get($options, 'transition'));
+	}
+
+	@include tribar-middle {
+		margin-top: map-get($options, 'thickness') + map-get($options, 'gutter');
+        margin-bottom: map-get($options, 'thickness') + map-get($options, 'gutter');
+	}
+
+	@include tribar-edge {
+		position: absolute;
+		content: '';
+	}
+
+	@include tribar-top {
+		top: -(map-get($options, 'thickness') + map-get($options, 'gutter'));
+	}
+
+	@include tribar-bottom {
+		top: map-get($options, 'thickness') + map-get($options, 'gutter');
+	}
+}
+
+// Export
+// ------
+@include exports('tribar') {
+	@if $tribar-include-tribar-class {
+        .tribar {
+            @include tribar();
+        }
+	}
+}

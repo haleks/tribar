@@ -5,7 +5,7 @@
 <h1 align="center">
 Tribar
 <br>
-<!-- <a href="https://travis-ci.org/haleks/tribar" target="_blank"><img src="https://img.shields.io/travis/haleks/tribar/master.svg?style=flat-square" alt="travic ci"></a> -->
+<a href="https://travis-ci.org/haleks/tribar" target="_blank"><img src="https://img.shields.io/travis/haleks/tribar/master.svg?style=flat-square" alt="travic ci"></a>
 <a href="https://github.com/haleks/tribar/releases" target="_blank"><img src="https://img.shields.io/github/release/haleks/tribar.svg?style=flat-square" alt="latest release"></a>
 <a href="LISCENCE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-ff4c00.svg?style=flat-square" alt="liscense"></a>
 </h1>
@@ -24,12 +24,5 @@ bower install tribar
 ```
 
 
-
-### How to Use
-
-
-
-
-### License
-
-Burger Sass is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## License
+Tribar is licensed under [The MIT License (MIT)](LICENSE).

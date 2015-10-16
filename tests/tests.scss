@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// Haleks — Tribar
+// https://haleks.ca
+// Licensed under MIT Open Source
+
+
+// Import True.
+@import 'true';
+
+// Import settings.
+@import 'settings';
+
+// Import Tribar.
+@import 'tribar';
+
+// Import the tests.
+@import 'core/tests';
+
+// Run the tests
+@include report;
