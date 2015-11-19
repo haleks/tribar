@@ -118,7 +118,7 @@
 
 @function get-cross-degrees($degrees, $reverse) {
     $before: get-degrees($degrees, if($reverse, true, false));
-    $after: get-degrees($degrees, if($reverse, true, false));
+    $after: get-degrees($degrees, if($reverse, false, true));
 
     @return (before: $before, after: $after);
 }
