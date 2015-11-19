@@ -117,13 +117,8 @@
 //    @params $clockwise [ bool ]: Multiple options used to create a burger to arrow animation
 
 @function get-cross-degrees($degrees, $reverse) {
-    @if $reverse {
-        $before: get-degrees($degrees);
-        $after: get-degrees($degrees, false);
-    } @else {
-        $before: get-degrees($degrees, false);
-        $after: get-degrees($degrees);
-    }
+    $before: get-degrees($degrees, if($reverse, true, false));
+    $after: get-degrees($degrees, if($reverse, true, false));
 
     @return (before: $before, after: $after);
 }
