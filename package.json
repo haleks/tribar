@@ -18,11 +18,13 @@
   "main": "scss/tribar.scss",
   "style": "dist/css/tribar.css",
   "sass": "scss/tribar.scss",
+  "dependencies": {
+    "mathsass": "^0.9.5"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "laravel-elixir": "^3.0.0",
     "laravel-elixir-mocha": "^0.1.0",
-    "mathsass": "^0.9.5",
     "sass-true": "^2.0.2"
   },
   "bugs": {
