@@ -26,8 +26,12 @@
     "*.md",
     "*.json"
   ],
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "mathsass": "~0.9.5"
+  },
+  "devDependencies": {
+    "true": "~2.0.2"
+  },
   "bugs": {
     "url": "https://github.com/haleks/tribar/issues"
   }

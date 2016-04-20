@@ -18,7 +18,15 @@
   "main": "scss/tribar.scss",
   "style": "dist/css/tribar.css",
   "sass": "scss/tribar.scss",
-  "devDependencies": {},
+  "dependencies": {
+    "mathsass": "^0.9.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "laravel-elixir": "^3.0.0",
+    "laravel-elixir-mocha": "^0.1.0",
+    "sass-true": "^2.0.2"
+  },
   "bugs": {
     "url": "https://github.com/haleks/tribar/issues"
   }
